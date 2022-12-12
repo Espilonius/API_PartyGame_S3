@@ -28,7 +28,7 @@ jobs:
       run: dotnet test --no-build --verbosity normal
 ---
 
-name: SonarCloud
+name: SONAR_TOKEN
 on:
   push:
     branches:
@@ -69,9 +69,9 @@ jobs:
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ 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 }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ 6750942378a5dbe79661c80c9abb05df691e0f04 }}
+          SONAR_TOKEN: ${{ 4f1438c2bece4a7be7c13cb7410513de032d8119 }}
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"Espilonius_API_PartyGame_S3" /o:"espilonius" /d:sonar.login="${{ 6750942378a5dbe79661c80c9abb05df691e0f04 }}" /d:sonar.host.url="https://sonarcloud.io"
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"Espilonius_API_PartyGame_S3" /o:"espilonius" /d:sonar.login="${{ 4f1438c2bece4a7be7c13cb7410513de032d8119 }}" /d:sonar.host.url="https://sonarcloud.io"
           <insert_your_clean_build_command>
-          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ 6750942378a5dbe79661c80c9abb05df691e0f04 }}"
+          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ 4f1438c2bece4a7be7c13cb7410513de032d8119 }}"
