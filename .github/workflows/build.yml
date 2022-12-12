@@ -26,16 +26,8 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
----
-name: SonarCloud
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    types: [opened, synchronize, reopened]
-jobs:
-  build:
+
+  CICD:
     name: Build and analyze
     runs-on: windows-latest
     steps:
