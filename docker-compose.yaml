@@ -1,0 +1,15 @@
+version: "3"
+services:
+  backend_gameservice:
+    image: espilonius/gameservice:main-eeaa912
+    ports:
+      - "8080:80"
+    depends_on:
+      - mongodb_container
+  mongodb_container:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: rootpassword
+    ports:
+      - 27017:27017
