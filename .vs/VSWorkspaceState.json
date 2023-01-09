@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.github",
+    "\\.github\\workflows",
+    "\\GameService_S3_Individueel",
+    "\\GameService_S3_Individueel\\obj",
+    "\\GameService_S3_Individueel\\obj\\Debug",
+    "\\PartyGameAPI"
+  ],
+  "SelectedNode": "\\PartyGameAPI\\appsettings.Development.json",
+  "PreviewInSolutionExplorer": false
+}
